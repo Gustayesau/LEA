@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="60cb960f21f642fa9f22497847739aea" Name="Diagram1">
+        <EntityTypeShape EntityType="InvenFacturaModel.Apertura" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Caja" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Categoria" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Cierre" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Cliente" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Compra" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.DetalleVenta" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Devoluciones" Width="1.5" PointX="7.5" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Empleado" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Eventos" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Producto" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Proveedor" Width="1.5" PointX="3" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Servicio" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Ticket" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InvenFacturaModel.Venta" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Apertura__IdCaja__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Apertura__IdEmpl__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Cierre__IdCaja__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Producto__IdCate__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Cierre__IdEmplea__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Venta__IdCliente__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Compra__IdProduc__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Compra__IdProvee__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__DetalleVe__IdPro__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__DetalleVe__IdSer__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__DetalleVe__IdVen__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__DetalleVe__NumTi__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Devolucio__NumTi__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="InvenFacturaModel.FK__Venta__IdEmplead__4D94879B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

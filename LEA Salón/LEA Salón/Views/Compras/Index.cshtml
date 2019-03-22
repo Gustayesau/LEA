@@ -1,0 +1,130 @@
+﻿@model IEnumerable<LEA_Salón.Models.Compra>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Scripts/Tabla/datatables.min.css" rel="stylesheet" />
+<script src="~/Scripts/Tabla/datatables.min.js"></script>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered" id="dtTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaVencimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCompra)
+            </th>
+ 
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioVenta)
+            </th>
+
+    
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioCompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVencimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCompra)
+            </td>
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioVenta)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IdCompra }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdCompra }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdCompra })
+            </td>
+        </tr>
+        }
+    </tbody>
+
+
+</table>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var espanol =
+        {
+            "sProcessing": "Procesando...",
+            "sLengthMenu": "Cantidad de registros _MENU_",
+            "sZeroRecords": "No se encontraron resultados",
+            "sEmptyTable": "Ningún dato disponible en esta tabla",
+            "sInfo": "Registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "sInfoPostFix": "",
+            "sSearch": "Buscar:",
+            "sUrl": "",
+            "sInfoThousands": ",",
+            "sLoadingRecords": "Cargando...",
+            "oPaginate": {
+                "sFirst": "Primero",
+                "sLast": "Último",
+                "sNext": "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+            }
+
+        };
+
+        $('#dtTable').DataTable({
+            responsive: true,
+            language: espanol,
+            "dom": '<"dt-buttons"Bf><"clear">lirtp',
+            "paging": true,
+            "autoWidth": true,
+            "buttons": [
+                'colvis',
+                'copyHtml5',
+                'csvHtml5',
+                'excelHtml5',
+                'pdfHtml5',
+                'print'
+            ]
+        });
+
+
+    });
+</script>
+
